@@ -1,0 +1,98 @@
+form {
+  background-color: var(--color-white-0);
+  border: 1px solid var(--color-grey-1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 26px;
+  gap: 18px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+form .container__description {
+  display: flex;
+  flex-direction: column;
+}
+
+form .container__valor {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .container__valor div {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+input {
+  box-sizing: border-box;
+  background: var(--color-white-1);
+  padding: 0px 16px;
+  border: 2px solid var(--color-white-1);
+  height: 52px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: 2px solid var(--color-grey-4);
+  border-radius: 4px;
+}
+
+input::placeholder {
+  font-family: "Nunito", sans-serif;
+}
+
+label {
+  color: var(--color-grey-4);
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+
+select {
+  height: 52px;
+  font-family: "Nunito", sans-serif;
+  border: 2px solid var(--color-white-1);
+  background: var(--color-white-1);
+  padding: 0px 10px;
+}
+
+select:focus {
+  outline: 2px solid #212529;
+  border-radius: 4px;
+}
+
+select option {
+  min-height: 52px;
+  background: var(--color-white-1);
+}
+
+select option:focus {
+  background: var(--color-grey-1);
+}
+
+span {
+  color: var(--color-grey-2);
+  font-size: 0.75rem;
+}
+
+.container__form form button {
+  background-color: var(--color-pink-1);
+  border: 2px solid var(--color-pink-1);
+  color: var(--color-white-0);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .container__form form button:hover {
+    background-color: var(--color-pink-2);
+    color: var(--color-grey-1);
+  }
+
+  .container__form {
+    width: 100%;
+  }
+}

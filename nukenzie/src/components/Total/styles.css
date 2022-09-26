@@ -1,0 +1,29 @@
+.container__total {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container__totalDespesas {
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 90%;
+  padding: 20px;
+  border: 1px solid var(--color-grey-1);
+}
+
+.container__totalDespesas .container__priceTotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container__totalDespesas span {
+  font-weight: 700;
+  color: var(--color-pink-1);
+  font-size: 0.9rem;
+}
+
+.container__totalDespesas p {
+  font-size: 0.75rem;
+}
