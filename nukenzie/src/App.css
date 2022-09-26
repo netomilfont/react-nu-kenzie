@@ -11,6 +11,24 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  margin-bottom: 20px;
+}
+
+.container__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__filter {
+  width: 90%;
+}
+
+.container__buttonFilter {
+  display: flex;
+  gap: 16px;
 }
 
 @media (min-width: 1024px) {
