@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import TextResume from "./components/TextResume";
 import Button from "./components/Button";
 import TitleList from "./components/TitleList";
+import NoCard from "./components/NoCard";
 
 const App = () => {
   return (
@@ -12,17 +13,20 @@ const App = () => {
         <Header />
         <div className="container__main">
           <Form />
-        </div>
-        <div className="container__list">
-          <div className="container__filter">
-            <TextResume />
-            <div className="container__buttonFilter">
-              <Button />
-              <Button />
-              <Button />
-            </div>
-            <div>
-              <TitleList />
+          <div className="container__list">
+            <div className="container__filter">
+              <div className="container__allFilter">
+                <TextResume />
+                <div className="container__buttonFilter">
+                  <Button />
+                  <Button />
+                  <Button />
+                </div>
+              </div>
+              <div className="container__listCard">
+                <TitleList />
+                <NoCard />
+              </div>
             </div>
           </div>
         </div>

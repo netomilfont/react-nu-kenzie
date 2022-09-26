@@ -94,4 +94,8 @@ span {
     background-color: #e34981;
     color: var(--color-grey-1);
   }
+
+  .container__form {
+    width: 40%;
+  }
 }
