@@ -1,0 +1,93 @@
+.container__form {
+  width: 90%;
+}
+
+form {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 26px;
+  gap: 18px;
+  width: 80%;
+}
+
+form .container__description {
+  display: flex;
+  flex-direction: column;
+}
+
+form .container__valor {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+form .container__valor div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+input {
+  background: #f8f9fa;
+  padding: 0px 16px;
+  border: 2px solid #f8f9fa;
+  height: 52px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: 2px solid #212529;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  font-family: "Nunito", sans-serif;
+}
+
+label {
+  color: #212529;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+
+select {
+  height: 52px;
+  font-family: "Nunito", sans-serif;
+  border: 2px solid #f8f9fa;
+  background: #f8f9fa;
+  padding: 0px 16px;
+}
+
+select:focus {
+  outline: 2px solid #212529;
+  border-radius: 4px;
+}
+
+option {
+  min-height: 52px;
+  background: #f8f9fa;
+  padding: 16px;
+}
+
+span {
+  color: #868e96;
+  font-size: 0.75rem;
+}
+
+.container__form form button {
+  background-color: #fd377e;
+  border: 2px solid #fd377e;
+  color: var(--color-white-0);
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .container__form form button:hover {
+    background-color: #e34981;
+    color: var(--color-grey-1);
+  }
+}
