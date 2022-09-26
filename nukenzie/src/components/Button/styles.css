@@ -2,7 +2,7 @@ button {
   background-color: var(--color-grey-1);
   border: 1.4px solid var(--color-grey-1);
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px 15px;
   box-sizing: border-box;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
@@ -16,5 +16,10 @@ button {
     color: var(--color-white-1);
     transition: 0.35s;
     cursor: pointer;
+  }
+
+  button:focus {
+    background-color: #fd377e;
+    color: var(--color-white-0);
   }
 }

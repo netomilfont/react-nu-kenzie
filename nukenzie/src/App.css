@@ -26,12 +26,12 @@
   align-items: center;
 }
 
-.container__filter {
-  width: 90%;
+.container__allFilter {
+  margin-bottom: 20px;
 }
 
-.container__buttonFilter button {
-  padding: 10px 18px;
+.container__filter {
+  width: 90%;
 }
 
 .container__buttonFilter {

@@ -1,18 +1,23 @@
-import "../styles.css";
-import ImgTrash from "../TrashImg";
+import "./styles.css";
+import ImgTrash from "../../img/ButtonTrash.png";
 
 const Cards = ({ transations }) => {
   return (
     <ul>
-      {transations.map((profile, index) => (
-        <li key={index} className="card">
+      {transations.map((card, index) => (
+        <li
+          key={index}
+          className={card.type === "Entrada" ? "card__green" : "card"}
+        >
           <div>
-            <h3>Salário - Mês Dezembro</h3>
-            <span>Entrada</span>
+            <h3>{card.description}</h3>
+            <span>{card.type}</span>
           </div>
-          <div>
-            <p>R$ 6.660,00</p>
-            <input type="image" src={ImgTrash} alt="" />
+          <div className="card__price">
+            <p>{`R$ ${card.price},00`}</p>
+            <div>
+              <img src={ImgTrash} alt="" />
+            </div>
           </div>
         </li>
       ))}

@@ -1,9 +1,9 @@
 import "./styles.css";
 
-const Button = () => {
+const Button = ({ name }) => {
   return (
     <div>
-      <button>Inicio</button>
+      <button>{name}</button>
     </div>
   );
 };

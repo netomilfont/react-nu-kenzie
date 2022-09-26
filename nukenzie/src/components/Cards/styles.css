@@ -1,0 +1,33 @@
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--color-white-1);
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #e9ecef;
+}
+
+.card__green {
+  border-left: 4px solid #03b898;
+}
+
+.card__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card__price div {
+  width: 22px;
+  height: 22px;
+}
+
+.card__price img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
