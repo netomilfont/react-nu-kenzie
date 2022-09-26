@@ -1,6 +1,6 @@
 form {
-  background-color: #ffffff;
-  border: 1px solid #e9ecef;
+  background-color: var(--color-white-0);
+  border: 1px solid var(--color-grey-1);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -28,16 +28,16 @@ form .container__valor div {
 
 input {
   box-sizing: border-box;
-  background: #f8f9fa;
+  background: var(--color-white-1);
   padding: 0px 16px;
-  border: 2px solid #f8f9fa;
+  border: 2px solid var(--color-white-1);
   height: 52px;
   font-size: 1rem;
   margin-bottom: 5px;
 }
 
 input:focus {
-  outline: 2px solid #212529;
+  outline: 2px solid var(--color-grey-4);
   border-radius: 4px;
 }
 
@@ -46,7 +46,7 @@ input::placeholder {
 }
 
 label {
-  color: #212529;
+  color: var(--color-grey-4);
   margin-bottom: 10px;
   font-size: 0.75rem;
 }
@@ -54,8 +54,8 @@ label {
 select {
   height: 52px;
   font-family: "Nunito", sans-serif;
-  border: 2px solid #f8f9fa;
-  background: #f8f9fa;
+  border: 2px solid var(--color-white-1);
+  background: var(--color-white-1);
   padding: 0px 10px;
 }
 
@@ -66,21 +66,21 @@ select:focus {
 
 select option {
   min-height: 52px;
-  background: #f8f9fa;
+  background: var(--color-white-1);
 }
 
 select option:focus {
-  background: #e9ecef;
+  background: var(--color-grey-1);
 }
 
 span {
-  color: #868e96;
+  color: var(--color-grey-2);
   font-size: 0.75rem;
 }
 
 .container__form form button {
-  background-color: #fd377e;
-  border: 2px solid #fd377e;
+  background-color: var(--color-pink-1);
+  border: 2px solid var(--color-pink-1);
   color: var(--color-white-0);
   font-size: 1rem;
   font-weight: 500;
@@ -88,11 +88,11 @@ span {
 
 @media (min-width: 1024px) {
   .container__form form button:hover {
-    background-color: #e34981;
+    background-color: var(--color-pink-2);
     color: var(--color-grey-1);
   }
 
   .container__form {
-    width: 40%;
+    width: 100%;
   }
 }

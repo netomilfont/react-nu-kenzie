@@ -39,7 +39,7 @@ const Form = ({ setCards }) => {
               id="inputValor"
               placeholder="1"
               value={price}
-              onChange={(event) => setPrice(event.target.value)}
+              onChange={(event) => setPrice(Number(event.target.value))}
               required
             />
           </div>

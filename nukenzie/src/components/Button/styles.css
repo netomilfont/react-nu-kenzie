@@ -19,7 +19,7 @@ button {
   }
 
   button:focus {
-    background-color: #fd377e;
+    background-color: var(--color-pink-1);
     color: var(--color-white-0);
   }
 }
