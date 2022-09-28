@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import "./App.css";
 import Cards from "./components/Cards";
 import Header from "./components/Header";
@@ -9,10 +8,33 @@ import Button from "./components/Button";
 import ImgInicio from "./img/illustration.png";
 import LogoInicio from "./img/NuKenzieInicio.png";
 import Total from "./components/Total";
+import NoCard from "./components/NoCard";
+import { useEffect } from "react";
 
 const App = () => {
   const [cards, setCards] = useState([]);
   const [auth, setAuth] = useState(true);
+  const [cardsRender, setCardsRender] = useState([]);
+
+  useEffect(() => {
+    setCardsRender(cards);
+  }, [cards]);
+
+  function filterCategory(type) {
+    if (type === "Todos") {
+      setCardsRender(cards);
+    } else {
+      const filterResult = cards.filter((element) => element.type === type);
+      setCardsRender(filterResult);
+    }
+  }
+
+  function removeTransaction(clickedCard) {
+    console.log(clickedCard);
+    const newCardsList = cards.filter((element) => element !== clickedCard);
+    console.log(newCardsList);
+    setCards(newCardsList);
+  }
 
   return (
     <>
@@ -39,20 +61,39 @@ const App = () => {
           <div className="container__main">
             <div>
               <Form setCards={setCards} />
-              <Total total={cards} />
+              {cards.length === 0 ? <div></div> : <Total total={cards} />}
             </div>
             <div className="container__list">
               <div className="container__filter">
                 <div className="container__allFilter">
                   <TextResume />
                   <div className="container__buttonFilter">
-                    <Button name={"Todos"} />
-                    <Button name={"Entradas"} />
-                    <Button name={"Despesas"} />
+                    <Button
+                      name={"Todos"}
+                      onClick={() => filterCategory("Todos")}
+                    />
+                    <Button
+                      name={"Entradas"}
+                      onClick={() => filterCategory("Entrada")}
+                    />
+                    <Button
+                      name={"Despesas"}
+                      onClick={() => filterCategory("Despesa")}
+                    />
                   </div>
                 </div>
                 <div className="container__listCard">
-                  <Cards transations={cards} />
+                  {cardsRender.length === 0 ? (
+                    <>
+                      <h3>Você ainda não possui nenhum lançamento</h3>
+                      <NoCard />
+                    </>
+                  ) : (
+                    <Cards
+                      transations={cardsRender}
+                      removeCard={removeTransaction}
+                    />
+                  )}
                 </div>
               </div>
             </div>
