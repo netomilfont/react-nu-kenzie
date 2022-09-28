@@ -1,7 +1,7 @@
 import "./styles.css";
 import ImgTrash from "../../img/ButtonTrash.png";
 
-const Cards = ({ transations }) => {
+const Cards = ({ transations, removeCard }) => {
   return (
     <ul>
       {transations.map((card, index) => (
@@ -16,7 +16,12 @@ const Cards = ({ transations }) => {
           <div className="card__price">
             <p>{`R$ ${card.price},00`}</p>
             <div>
-              <img src={ImgTrash} alt="" />
+              <img
+                src={ImgTrash}
+                alt=""
+                id={index}
+                onClick={() => removeCard(card)}
+              />
             </div>
           </div>
         </li>

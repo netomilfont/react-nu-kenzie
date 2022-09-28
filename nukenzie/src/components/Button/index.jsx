@@ -1,9 +1,9 @@
 import "./styles.css";
 
-const Button = ({ name }) => {
+const Button = ({ name, onClick }) => {
   return (
     <div>
-      <button>{name}</button>
+      <button onClick={onClick}>{name}</button>
     </div>
   );
 };
